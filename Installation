@@ -1,4 +1,5 @@
-// You need to add below entery in  /etc/sudoers file
+// You need to add below entry in  /etc/sudoers file
+// use vim command to add the below entries
 //jenkins ALL=(ALL) NOPASSWD: ALL
 //usermod -a -G root jenkins
 
@@ -9,7 +10,7 @@ agent any
 		stage ('install-nginx')
 		{
 			steps {
-				sh 'sudo apt update -y'
+				sh 'sudo apt upgrade -y'
 				sh 'sudo apt install nginx -y'
 			}
 		}
